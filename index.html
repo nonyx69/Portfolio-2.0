@@ -4,51 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noa Guilhot — Développeur Back-End</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!--SEO Référencement-->
+  <meta name="description" content="Portfolio de Noa Guilhot, développeur back-end, Symfony, PHP, SQL, Angular.">
 
   <!--Import emoji via font-awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!--Police P5R-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Oswald:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
 <body>
 
 <!--Navigation-->
-<header>
-  <div>
-    <a href="https://nonyx69.github.io/CV-P5R/">
-      <span>CV</span>
+<header class="header" id="header">
+  <div class="header-contenu">
+    <a href="https://nonyx69.github.io/CV-P5R/" class="logo">
+      <span class="logo-texte">CV</span>
     </a>
-    <nav>
-      <a href="#profil"><span>01</span>Profil</a>
-      <a href="#competences"><span>02</span>Compétences</a>
-      <a href="#projets"><span>03</span>Infiltrations</a>
-      <a href="#contact"><span>04</span>Contact</a>
+
+    <nav class="nav" id="nav">
+      <span class="curseur" id="curseur"></span>
+      <a href="#profil" class="lien-nav"><span class="num">01</span>Profil</a>
+      <a href="#competences" class="lien-nav"><span class="num">02</span>Compétences</a>
+      <a href="#projets" class="lien-nav"><span class="num">03</span>Infiltrations</a>
+      <a href="#contact" class="lien-nav"><span class="num">04</span>Contact</a>
     </nav>
   </div>
 </header>
 
 <!--Intro-->
-<section>
-  <div>
-    <p>— Carte de voleur —</p>
-    <h1>
-      <span>GUILHOT</span>
-      <span>NOA</span>
+<section class="intro">
+  <div class="intro-rouge"></div>
+  <div class="intro-noir"></div>
+
+  <div class="intro-texte">
+    <p class="sous-titre">— Carte de voleur —</p>
+    <h1 class="titre-principal">
+      <span class="ligne-titre" data-text="GUILHOT">GUILHOT</span>
+      <span class="ligne-titre titre-noir" data-text="NOA">NOA</span>
     </h1>
-    <p>Développeur Back-End</p>
-    <p>Description</p>
-    <a href="#profil">Découvrir le profil</a>
+    <p class="metier">Développeur Back-End</p>
+    <p class="description">Description</p>
+    <a href="#profil" class="btn btn-rouge">Découvrir le profil</a>
   </div>
-  <div>
+
+  <div class="image-intro">
     <img src="mai.jpg" alt="mai" />
   </div>
-  <div>
+
+  <div class="defiler">
     <span>Défiler</span>
+    <div class="ligne-defiler"></div>
   </div>
 </section>
 
 <main>
 
 <!--  Profil-->
-  <section>
+  <section id="profil">
     <div>
       <span>01</span>
       <h2>Profil</h2>
@@ -88,7 +105,7 @@
   </section>
 
 <!--  Competences-->
-  <section>
+  <section id="competences">
     <div>
       <span>02</span>
       <h2>Compétences</h2>
@@ -111,7 +128,7 @@
   </section>
 
 <!--  Projets-->
-  <section>
+  <section id="projets">
     <div>
       <span>03</span>
       <h2>Infiltrations</h2>
@@ -138,7 +155,7 @@
   </section>
 
 <!--  Contact-->
-  <section>
+  <section id="contact">
     <div>
       <p>Contact</p>
       <h2>???</h2>
