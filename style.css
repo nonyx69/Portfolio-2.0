@@ -1,7 +1,9 @@
 :root {
   /*Couleurs*/
   --rouge: #D80016;
+  --rouge-fonce: #a3000f;
   --noir: #0A0A0A;
+  --noir-doux: #151515;
   --blanc: #F4F4F4;
   --gris: rgba(253, 253, 251, 0.14);
 
@@ -303,4 +305,128 @@ a {
 .btn-rouge:hover {
   background: var(--blanc);
   color: var(--noir);
+}
+
+
+.section {
+  padding: 110px 8vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-sombre {
+  max-width: none;
+  background: var(--noir-doux);
+}
+
+.entete-section {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.num-section {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--rouge);
+}
+
+.titre-section {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+  transform: skew(var(--pente));
+}
+
+.ombre-rouge::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  color: var(--rouge);
+  z-index: -1;
+}
+
+.bloc-profil {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
+}
+
+.carte-profil {
+  background: var(--blanc);
+  color: var(--noir);
+  padding: 30px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+.entete-carte {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  border-bottom: 2px solid var(--noir);
+  padding-bottom: 18px;
+}
+
+.icone-avatar {
+  color: var(--rouge);
+  font-size: 45px;
+  line-height: 1;
+}
+
+.infos-perso {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--rouge-fonce);
+}
+
+.nom {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.liste-infos {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.liste-infos li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  border-bottom: 1px dashed rgba(10, 10, 10, 0.25);
+  padding-bottom: 10px;
+}
+
+.liste-infos span {
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--rouge-fonce);
+}
+
+.bio p {
+  margin: 0 0 20px;
+  font-size: 1.05rem;
+}
+
+.bande-separation {
+  height: 14px;
+  background: repeating-linear-gradient(
+          -45deg,
+          var(--rouge) 0px,
+          var(--rouge) 18px,
+          var(--noir) 18px,
+          var(--noir) 36px
+  );
 }
