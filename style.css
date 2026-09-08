@@ -420,6 +420,10 @@ a {
   font-size: 1.05rem;
 }
 
+.bio strong {
+  text-decoration: underline;
+}
+
 .bande-separation {
   height: 14px;
   background: repeating-linear-gradient(
