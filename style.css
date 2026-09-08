@@ -53,7 +53,7 @@ a {
 }
 
 .header-contenu {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 18px 32px;
   display: flex;
@@ -70,6 +70,7 @@ a {
   background: var(--rouge);
   transform: skew(var(--pente));
   transition: transform 0.2s ease;
+  margin-left: 20%;
 }
 
 .logo:hover {
