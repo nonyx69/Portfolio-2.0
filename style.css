@@ -435,3 +435,124 @@ a {
           var(--noir) 36px
   );
 }
+
+/*Projets*/
+
+.liste-projets {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.carte-projet {
+    position: relative;
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 24px;
+    background: var(--noir);
+    border-left: 4px solid var(--rouge);
+    overflow: hidden;
+    transition: background 1s ease, padding-left 1s ease;
+}
+
+.carte-projet::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, transparent 40%, rgba(226, 0, 26, 0.16) 50%, transparent 60%);
+    transform: translateX(-120%);
+    transition: transform 1s ease;
+    pointer-events: none;
+}
+
+.carte-projet:hover::before {
+    transform: translateX(0);
+}
+
+.viseur {
+    position: absolute;
+    inset: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: inset 0.25s ease;
+}
+
+.carte-projet:hover .viseur {
+    opacity: 1;
+    inset: 6px;
+}
+
+.viseur::before,
+.viseur::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--rouge);
+}
+
+.viseur::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+.viseur::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+.tag-projet {
+    font-family: var(--font-accent);
+    font-style: italic;
+    text-align: center;
+    color: var(--rouge);
+    font-size: 0.9rem;
+}
+
+.infos-projet h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    margin: 0 0 8px;
+}
+
+.infos-projet p {
+    margin: 0 0 14px;
+    color: rgba(253, 253, 251, 0.72);
+    max-width: 60ch;
+}
+
+.technos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+}
+
+.technos li {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border: 1px solid var(--gris);
+    color: rgba(253, 253, 251, 0.72);
+}
+
+.lien-projet {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--blanc);
+    padding: 10px 6px;
+    border-bottom: 2px solid var(--rouge);
+}
+
+.lien-projet:hover {
+    color: var(--rouge);
+}
