@@ -640,3 +640,48 @@ a {
     margin: 0;
     font-family: var(--font-display);
 }
+
+.carte-contact {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 32px;
+    background: var(--rouge);
+    color: var(--blanc);
+    position: relative;
+    clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+}
+
+.sous-titre-contact {
+    font-family: var(--font-accent);
+    font-style: italic;
+    letter-spacing: 0.04em;
+    margin: 0 0 10px;
+    color: rgba(253, 253, 251, 0.85);
+}
+
+.titre-contact {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    margin: 0 0 14px;
+}
+
+.texte-contact {
+    margin: 0 0 32px;
+    color: rgba(253, 253, 251, 0.9);
+}
+
+.boutons-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+.carte-contact .btn-blanc {
+    border-color: var(--blanc);
+}
+
+.carte-contact .btn-blanc:hover {
+    background: var(--noir);
+    border-color: var(--noir);
+}
