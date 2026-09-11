@@ -606,3 +606,37 @@ a {
 .lien-projet:hover {
     color: var(--rouge);
 }
+
+.grille-competences {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.carte-competence {
+    position: relative;
+    background: var(--noir);
+    border: 2px solid var(--gris);
+    padding: 26px 20px;
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.carte-competence:hover {
+    border-color: var(--rouge);
+    transform: translateY(-4px);
+    background: var(--noir-doux);
+}
+
+.categorie {
+    display: inline-block;
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--rouge);
+    margin-bottom: 10px;
+}
+
+.carte-competence h3 {
+    margin: 0;
+    font-family: var(--font-display);
+}
