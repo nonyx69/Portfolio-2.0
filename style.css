@@ -685,3 +685,14 @@ a {
     background: var(--noir);
     border-color: var(--noir);
 }
+
+.footer {
+    background-color: var(--noir-doux);
+    padding: 32px 8vw 40px;
+    text-align: center;
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(253, 253, 251, 0.55);
+}
+.footer span { color: var(--rouge); }
