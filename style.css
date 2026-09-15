@@ -882,9 +882,9 @@ a {
 
     .intro-rouge {
         top: 2%;
-        right: 50%;
+        right: 48%;
         transform: translateX(50%) skew(-6deg);
-        width: 94%;
+        width: 100%;
         height: 96%;
         max-width: 100%;
         border-radius: 6px;
@@ -988,6 +988,7 @@ a {
 
     .carte-projet,
     .carte-projet-gris {
+        grid-template-columns: 1fr;
         gap: 12px;
         padding: 20px 16px;
     }
@@ -1034,6 +1035,10 @@ a {
     .boutons-contact {
         flex-direction: column;
         width: 100%;
+    }
+
+    .defiler {
+        display: none;
     }
 
     .boutons-contact .btn {
