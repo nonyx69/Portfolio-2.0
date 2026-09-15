@@ -86,14 +86,13 @@ a {
 .nav {
   position: relative;
   display: flex;
-  gap: 8px;
 }
 
 .lien-nav {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 8px 14px;
   font-family: var(--font-accent);
   font-style: italic;
   font-weight: 600;
@@ -141,7 +140,7 @@ a {
   position: absolute;
   top: -10%;
   right: -18%;
-  width: 75%;
+  width: 80%;
   height: 130%;
   background: var(--rouge);
   transform: skew(-14deg);
@@ -703,7 +702,6 @@ a {
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 
     .header-contenu {
-        flex-direction: column;
         gap: 12px;
         padding: 14px 20px;
         background: rgba(10, 10, 10, 0.95);
@@ -835,5 +833,210 @@ a {
     .carte-contact {
         padding: 48px 24px;
         clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+    }
+}
+
+
+/* RESPONSIVE - MOBILE (< 768px) */
+
+@media screen and (max-width: 767px) {
+
+    .header-contenu {
+        gap: 10px;
+        background: rgba(10, 10, 10, 0.95);
+        padding: 12px 16px;
+        backdrop-filter: blur(8px);
+    }
+
+    .logo {
+        margin-left: 0;
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-texte {
+        font-size: 1rem;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px 4px;
+    }
+
+    .lien-nav {
+        padding: 4px 6px;
+        font-size: 0.75rem;
+    }
+
+    .num {
+        display: none;
+    }
+
+    .intro {
+        padding: 120px 5vw 50px;
+        min-height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-rouge {
+        top: 2%;
+        right: 50%;
+        transform: translateX(50%) skew(-6deg);
+        width: 94%;
+        height: 96%;
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    .intro-texte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 28px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .titre-principal {
+        font-size: clamp(2.6rem, 12vw, 4rem);
+        text-align: center;
+        width: 100%;
+    }
+
+    .ligne-titre {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .ligne-titre::before {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 100%;
+        text-align: center;
+        color: var(--noir);
+    }
+
+    .titre-noir::before {
+        color: var(--noir);
+        opacity: 0.6;
+    }
+
+    .metier {
+        font-size: 1.1rem;
+        margin: 14px 0 6px;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        max-width: 100%;
+        margin-bottom: 22px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 0.85rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .image-intro {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 80vw;
+        max-width: 280px;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .section {
+        padding: 60px 5vw;
+    }
+
+    .bloc-profil {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .carte-profil {
+        padding: 20px;
+    }
+
+    .liste-infos li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 0.85rem;
+        border-bottom: 1px dashed rgba(10, 10, 10, 0.25);
+        padding-bottom: 10px;
+    }
+
+    .liste-infos li span {
+        white-space: nowrap;
+        margin-left: 10px;
+        font-family: var(--font-accent);
+        font-style: italic;
+        color: var(--rouge-fonce);
+    }
+
+    .carte-projet,
+    .carte-projet-gris {
+        gap: 12px;
+        padding: 20px 16px;
+    }
+
+    .tag-projet {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .technos li {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .lien-projet {
+        display: inline-block;
+        margin-top: 6px;
+        font-size: 0.9rem;
+    }
+
+    .grille-competences {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .carte-competence {
+        padding: 18px 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carte-competence h3 {
+        font-size: 0.95rem;
+    }
+
+    .carte-contact {
+        padding: 36px 16px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .boutons-contact {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .boutons-contact .btn {
+        width: 100%;
     }
 }
