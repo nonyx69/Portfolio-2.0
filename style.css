@@ -696,3 +696,144 @@ a {
     color: rgba(253, 253, 251, 0.55);
 }
 .footer span { color: var(--rouge); }
+
+
+/* RESPONSIVE - TABLETTE (768px à 1024px) */
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    .header-contenu {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 20px;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(8px);
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 8px;
+    }
+
+    .lien-nav {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+    }
+
+    .intro {
+        padding: 140px 4vw 60px;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .intro-rouge {
+        right: 50%;
+        width: 90%;
+        max-width: 720px;
+        border-radius: 8px;
+    }
+
+    .intro-texte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto 36px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .titre-principal {
+        font-size: clamp(3.5rem, 8.5vw, 5.5rem);
+        text-align: center;
+        width: 100%;
+    }
+
+    .ligne-titre {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .ligne-titre::before {
+        position: absolute;
+        top: 6px;
+        left: 7px;
+        width: 100%;
+        text-align: center;
+        color: var(--noir);
+    }
+
+    .titre-noir::before {
+        color: var(--noir);
+        opacity: 0.6;
+    }
+
+    .image-intro {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .description {
+        max-width: 42ch;
+    }
+
+    .defiler {
+        display: none;
+    }
+
+    .section {
+        padding: 80px 6vw;
+    }
+
+    .bloc-profil {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .carte-profil {
+        max-width: 500px;
+        margin: 0 auto;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+    }
+
+    .carte-projet,
+    .carte-projet-gris {
+        grid-template-columns: 100px 1fr;
+        gap: 18px;
+        padding: 22px 20px;
+    }
+
+    .lien-projet {
+        grid-column: 1 / -1;
+        justify-self: start;
+        margin-top: 8px;
+    }
+
+    .grille-competences {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 14px;
+    }
+
+    .carte-contact {
+        padding: 48px 24px;
+        clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+    }
+}
