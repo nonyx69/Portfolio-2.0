@@ -694,7 +694,35 @@ a {
     font-size: 0.85rem;
     color: rgba(253, 253, 251, 0.55);
 }
-.footer span { color: var(--rouge); }
+.footer span {
+    color: var(--rouge);
+}
+
+
+/* script js */
+
+.curseur {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--rouge);
+    transform: skew(var(--pente));
+    opacity: 0;
+    transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), left 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), width 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.lien-nav.survole .num {
+    color: var(--noir);
+}
+
+.header.scrolled {
+    background: rgba(10, 10, 10, 0.5);
+    border-bottom: 1px solid var(--gris);
+    backdrop-filter: blur(6px);
+}
 
 
 /* RESPONSIVE - TABLETTE (768px à 1024px) */
@@ -833,6 +861,31 @@ a {
     .carte-contact {
         padding: 48px 24px;
         clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+    }
+
+    /* script js */
+
+    .curseur {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background: var(--rouge);
+        transform: skew(var(--pente));
+        opacity: 0;
+        transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), left 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), width 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+
+    .lien-nav.survole .num {
+        color: var(--noir);
+    }
+
+    .header.scrolled {
+        background: rgba(10, 10, 10, 0.5);
+        border-bottom: 1px solid var(--gris);
+        backdrop-filter: blur(6px);
     }
 }
 
@@ -1043,5 +1096,29 @@ a {
 
     .boutons-contact .btn {
         width: 100%;
+    }
+
+
+    /* script js */
+
+    .curseur {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transform: skew(var(--pente));
+        opacity: 0;
+        transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), left 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), width 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .lien-nav.survole .num {
+        color: var(--noir);
+    }
+
+    .header.scrolled {
+        background: rgba(10, 10, 10, 0.5);
+        border-bottom: 1px solid var(--gris);
+        backdrop-filter: blur(6px);
     }
 }
